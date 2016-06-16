@@ -17,7 +17,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
+import connector.DBConnector;
 /**
  *
  * @author CSE
@@ -38,7 +38,7 @@ static String stat_gender;
 
 
      
-    
+    Connection con=null;
 
     private static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";
     private static final String DATABASE_URL = "jdbc:mysql://localhost:3306/obbs_data";
@@ -57,24 +57,9 @@ static String stat_gender;
             throws ServletException, IOException {
         View_Details view_obj=new View_Details();
         response.setContentType("text/html;charset=UTF-8");
-        
-        Connection con = null;
-        PreparedStatement pstmt = null;
-        int i=0;
-        
-        try {
-            
-            //connecting to driver
-            
-            
-            Class.forName(JDBC_DRIVER);
-            
-            System.out.println("driver found");
-            con = DriverManager.getConnection(DATABASE_URL, USERNAME, PASSWORD);
-            System.out.println("Connected successfully");
-        
-        
-        
+  
+        con=DBConnector.getConnection();
+        System.out.println("I am happily run");
         if (request.getParameter("view_btn") != null) {
             ;
             view_obj.createView(request,response);
@@ -90,11 +75,7 @@ static String stat_gender;
 }
      
          
-      }
-            
-        catch(Exception e){
-            
-        }
+     
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
@@ -161,7 +142,8 @@ static String stat_gender;
              throws ServletException, IOException { 
       
     
-    RequestDispatcher dis=request.getRequestDispatcher("Prev_requests.jsp");
+    RequestDispatcher dis=request.getRequestDispatcher("getPDF.jsp");
+            System.out.println("Im inside summary");
             dis.forward(request, response);
             
         
@@ -195,17 +177,10 @@ public String getfname(){
                 
            
     try {
-          Connection con = null;
+        Connection con =DBConnector.getConnection();
         PreparedStatement pstmt = null;
         int i=0;
-            //connecting to driver
-            System.out.println("driver not yet found");
-            
-            Class.forName(JDBC_DRIVER);
-            
-            System.out.println("driver found");
-            con = DriverManager.getConnection(DATABASE_URL, USERNAME, PASSWORD);
-            System.out.println("Connected successfully");
+           
            
          
          
@@ -239,17 +214,10 @@ public String getlname(){
                 
            
     try {
-          Connection con = null;
+          Connection con =DBConnector.getConnection();
         PreparedStatement pstmt = null;
         int i=0;
-            //connecting to driver
-            System.out.println("driver not yet found");
             
-            Class.forName(JDBC_DRIVER);
-            
-            System.out.println("driver found");
-            con = DriverManager.getConnection(DATABASE_URL, USERNAME, PASSWORD);
-            System.out.println("Connected successfully");
            
          
          
@@ -283,17 +251,11 @@ public String get_dob(){
                 
            
     try {
-          Connection con = null;
+           Connection con =DBConnector.getConnection();
         PreparedStatement pstmt = null;
         int i=0;
             //connecting to driver
-            System.out.println("driver not yet found");
             
-            Class.forName(JDBC_DRIVER);
-            
-            System.out.println("driver found");
-            con = DriverManager.getConnection(DATABASE_URL, USERNAME, PASSWORD);
-            System.out.println("Connected successfully");
            
          
          
@@ -328,17 +290,10 @@ public String getb_group(){
                 
            
     try {
-          Connection con = null;
+           Connection con =DBConnector.getConnection();
         PreparedStatement pstmt = null;
         int i=0;
-            //connecting to driver
-            System.out.println("driver not yet found");
             
-            Class.forName(JDBC_DRIVER);
-            
-            System.out.println("driver found");
-            con = DriverManager.getConnection(DATABASE_URL, USERNAME, PASSWORD);
-            System.out.println("Connected successfully");
            
          
          
@@ -371,17 +326,11 @@ public String get_contact(){
                 
            
     try {
-          Connection con = null;
+           Connection con =DBConnector.getConnection();
         PreparedStatement pstmt = null;
         int i=0;
             //connecting to driver
-            System.out.println("driver not yet found");
             
-            Class.forName(JDBC_DRIVER);
-            
-            System.out.println("driver found");
-            con = DriverManager.getConnection(DATABASE_URL, USERNAME, PASSWORD);
-            System.out.println("Connected successfully");
            
          
          
@@ -404,7 +353,7 @@ public String get_contact(){
      
    
 }
-    catch(ClassNotFoundException | SQLException e){
+    catch(SQLException e){
         
     }
       return stat_contact;
@@ -415,17 +364,10 @@ public String get_username(){
                 
            
     try {
-          Connection con = null;
+           Connection con =DBConnector.getConnection();
         PreparedStatement pstmt = null;
         int i=0;
-            //connecting to driver
-            System.out.println("driver not yet found");
-            
-            Class.forName(JDBC_DRIVER);
-            
-            System.out.println("driver found");
-            con = DriverManager.getConnection(DATABASE_URL, USERNAME, PASSWORD);
-            System.out.println("Connected successfully");
+           
            
          
          
@@ -448,7 +390,7 @@ public String get_username(){
      
    
 }
-    catch(ClassNotFoundException | SQLException e){
+    catch(SQLException e){
         
     }
       return stat_username;
@@ -459,19 +401,11 @@ public String get_lastDonation(){
                 
            
     try {
-          Connection con = null;
+           Connection con =DBConnector.getConnection();
         PreparedStatement pstmt = null;
         int i=0;
             //connecting to driver
-            System.out.println("driver not yet found");
             
-            Class.forName(JDBC_DRIVER);
-            
-            System.out.println("driver found");
-            con = DriverManager.getConnection(DATABASE_URL, USERNAME, PASSWORD);
-            System.out.println("Connected successfully");
-           
-         
          
          pstmt=con.prepareStatement(sql_lastDonation);
          pstmt.setInt(1, donor_id);
@@ -492,7 +426,7 @@ public String get_lastDonation(){
      
    
 }
-    catch(ClassNotFoundException | SQLException e){
+    catch(SQLException e){
         
     }
       return stat_lastDonation;
@@ -503,17 +437,10 @@ public String get_password(){
                 
            
     try {
-          Connection con = null;
+           Connection con =DBConnector.getConnection();
         PreparedStatement pstmt = null;
         int i=0;
-            //connecting to driver
-            System.out.println("driver not yet found");
             
-            Class.forName(JDBC_DRIVER);
-            
-            System.out.println("driver found");
-            con = DriverManager.getConnection(DATABASE_URL, USERNAME, PASSWORD);
-            System.out.println("Connected successfully");
            
          String sql_pass="SELECT password FROM donor where donor_id=?";
          
@@ -536,7 +463,7 @@ public String get_password(){
      
    
 }
-    catch(ClassNotFoundException | SQLException e){
+    catch(SQLException e){
         
     }
       return stat_password;
@@ -547,17 +474,10 @@ public String get_gender(){
                 
            
     try {
-          Connection con = null;
+           Connection con =DBConnector.getConnection();
         PreparedStatement pstmt = null;
         int i=0;
             //connecting to driver
-            System.out.println("driver not yet found");
-            
-            Class.forName(JDBC_DRIVER);
-            
-            System.out.println("driver found");
-            con = DriverManager.getConnection(DATABASE_URL, USERNAME, PASSWORD);
-            System.out.println("Connected successfully");
            
          
          
@@ -580,7 +500,7 @@ public String get_gender(){
      
    
 }
-    catch(ClassNotFoundException | SQLException e){
+    catch(SQLException e){
         
     }
       return stat_gender;

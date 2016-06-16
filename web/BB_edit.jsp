@@ -14,6 +14,7 @@
         <title>Edit Details</title>
     </head>
     <body>
+        <div id="reg">
         <h1>Edit Details</h1>
         <% System.out.println("I am in the jsp page now!");
         View_bankDetails detail=new View_bankDetails();
@@ -26,20 +27,20 @@
                 <tbody>
                     <tr>
                         <td>Name:</td>
-                        <td><input type="text" name="bb_nam" value="<%=detail.get_BBname()%>" id="textarea" /> </td>
+                        <td><input type="text" name="bb_nam" value="<%=detail.get_BBname()%>" id="text1" /> </td>
                     </tr>
                      
                     <tr>
                         <td>Address:</td>
-                        <td><input type="text" name="bb_add" value="<%=detail.get_BBaddress()%>" id="textarea" /></td>
+                        <td><input type="text" name="bb_add" value="<%=detail.get_BBaddress()%>" id="text1" /></td>
                     </tr>
                     <tr>
                         <td>Contact:</td>
-                        <td><input type="text" name="bb_cont" value="<%=detail.get_BBcontact()%>" id="textarea"/></td>
+                        <td><input type="text" name="bb_cont" value="<%=detail.get_BBcontact()%>" id="text1"/></td>
                     </tr>
                     <tr>
                         <td>Username:</td>
-                        <td><input type="text" name="bb_user" value="<%=detail.get_BBusername()%>" id="textarea"/></td>
+                        <td><input type="text" name="bb_user" value="<%=detail.get_BBusername()%>" id="text1"/></td>
                     </tr>
                     
                    
@@ -48,10 +49,12 @@
                 
                 
             </table>
-
+    <br>
+    </br>
+    
                 <a href="bb_home.jsp"><input type="button" value="Cancel" name="edit_cancel" class="button red" /></a>
                 <input type="submit" value="Save Changes" name="bb_change" class="button red" />
    </form>
-   
+        </div>>
     </body>
 </html>
