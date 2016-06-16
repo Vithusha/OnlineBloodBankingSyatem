@@ -1,0 +1,319 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : May 12, 2016, 4:34:30 PM
+    Author     : Hp
+*/
+
+h1{
+    font-size: 200%;
+    background-position-x: 20%;
+    background-position-y: 5;
+}
+
+body{
+    background-color: white;
+    border-top:#cc0000;
+    border-top-style: groove;
+    border-top-width: 35px;
+    margin-top: 40px;
+    color: #cc0000;
+    font-size: 20px;
+    font-family: sans-serif;
+  
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background: url("images/studio.jpg")no-repeat center center fixed; 
+    
+    
+}
+
+#p{
+    font-family: sans-serif;
+    font-size: 45px;
+    position: absolute;
+    left:300%;
+    top: 100%;
+    color: #660000;
+    
+}
+
+#home_button{
+    
+    background: url("images/485916182.jpg");
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left: 1150px;
+    top: 86px;
+}
+
+#button{
+    color: black;
+    border: black;
+    border-bottom-width: 3px;
+    padding: 5px;
+    background-color: white;
+    border-style: initial;
+    display: inline-block;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    width: 200px;
+    font-size: 16px;
+}
+
+#try_button{
+    
+    background: url("images/tryAgain.png");
+    width: 50px;
+    height: 49px;
+    position: relative;
+    left: 210px;
+    top: 50px;
+}
+#back_button{
+    background: url("images/back.png");
+    width: 50px;
+    height: 49px;
+    position: relative;
+    left: 130px;
+    top: 50px;
+}
+#save_button{
+    background: url("images/Save-floppy.jpg");
+    width: 50px;
+    height: 49px;
+    position: relative;
+    left: 280px;
+    top: 50px;
+}
+#icon{
+    position: absolute;
+    left: 0px;
+    top:200px;
+    background-image: url(images/texture2.jpg);
+    height: 500px;
+    width: 300px;
+}
+.button {
+  display: inline-block;
+  height: 50px;
+  width: 250px;
+  line-height: 50px;
+  padding-right: 30px;
+  padding-left: 70px;
+  position: relative;
+  background-color:rgb(41,127,184);
+  color:rgb(255,255,255);
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+  
+  
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  text-shadow:0px 1px 0px rgba(0,0,0,0.5);
+-ms-filter:"progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=1,Color=#ff123852,Positive=true)";zoom:1;
+filter:progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=1,Color=#ff123852,Positive=true);
+
+  -moz-box-shadow:0px 2px 2px rgba(0,0,0,0.2);
+  -webkit-box-shadow:0px 2px 2px rgba(0,0,0,0.2);
+  box-shadow:0px 2px 2px rgba(0,0,0,0.2);
+  -ms-filter:"progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=2,Color=#33000000,Positive=true)";
+filter:progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=2,Color=#33000000,Positive=true);
+}
+
+.button span {
+  position: absolute;
+  left: 0;
+  width: 50px;
+  background-color:rgba(0,0,0,0.5);
+  
+  -webkit-border-top-left-radius: 5px;
+-webkit-border-bottom-left-radius: 5px;
+-moz-border-radius-topleft: 5px;
+-moz-border-radius-bottomleft: 5px;
+border-top-left-radius: 5px;
+border-bottom-left-radius: 5px;
+border-right: 1px solid  rgba(0,0,0,0.15);
+}
+
+.button:hover span, .button.active span {
+  background-color:rgb(0,102,26);
+  border-right: 1px solid  rgba(0,0,0,0.3);
+}
+
+.button:active {
+  margin-top: 2px;
+  margin-bottom: 13px;
+
+  -moz-box-shadow:0px 1px 0px rgba(255,255,255,0.5);
+-webkit-box-shadow:0px 1px 0px rgba(255,255,255,0.5);
+box-shadow:0px 1px 0px rgba(255,255,255,0.5);
+-ms-filter:"progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=1,Color=#ccffffff,Positive=true)";
+filter:progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=1,Color=#ccffffff,Positive=true);
+}
+
+.button.orange {
+  background: #FF7F00;
+}
+
+.button.purple {
+  background: #8e44ad;
+}
+
+.button.red {
+  background: #cc0000;
+}
+
+.button.green {
+    background:#00ff99;
+}
+
+.button.blue {
+    background: #3399ff;
+}
+/*
+#text1
+{
+border: 2px solid #ccc ;
+height: 26px;
+width: 223px;
+box-shadow:0px 0px 27px  #ffefe4   inset;
+transition:500ms all ease;
+padding:5px 5px 5px 5px;
+}
+
+#text1:hover, #text1:focus
+{
+width:260px;
+transition:500ms all ease;
+background:url(msg.png) no-repeat right;
+background-size:25px 25px;
+background-position:96% 62%;
+padding:5px 32px 5px 5px;
+}
+*/
+
+#text1
+{
+    border: 2px solid #ffe092;
+height: 31px;
+width: 223px;
+box-shadow: 0px 0px 27px #ffcab3 inset;
+transition:500ms all ease;
+padding:3px 3px 3px 3px;
+}
+
+#text1:hover, #text1:focus
+{
+width:260px;
+transition:500ms all ease;
+background:url(msg.png) no-repeat right;
+background-size:25px 25px;
+background-position:96% 62%;
+padding:3px 32px 3px 3px;
+}
+
+/*
+#text1
+{
+border: 2px solid rgb(173, 204, 204);
+height: 31px;
+width: 223px;
+box-shadow: 0px 0px 27px rgb(204, 204, 204) inset;
+transition:500ms all ease;
+padding:3px 3px 3px 3px;
+}
+
+#text1:hover, #text1:focus
+{
+width:260px;
+transition:500ms all ease;
+background:url(msg.png) no-repeat right;
+background-size:25px 25px;
+background-position:96% 62%;
+padding:3px 32px 3px 3px;
+}
+*/
+ .textbox {
+    background: #F1F1F1 url(http://html-generator.weebly.com/files/theme/input-text-40.png) no-repeat;
+    background-position: 5px -7px !important;
+    padding: 10px 10px 10px 25px;
+    width: 270px;
+    border: 1px solid #CCC;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    -moz-box-shadow: 0 1px 1px #ccc inset, 0 1px 0 #fff;
+    -webkit-box-shadow: 0 1px 1px #CCC inset, 0 1px 0 #FFF;
+    box-shadow: 0 1px 1px #CCC inset, 0 1px 0 #FFF;
+}
+
+.textbox:focus {
+    background-color: #FFF;
+    border-color: #E8C291;
+    outline: none;
+    -moz-box-shadow: 0 0 0 1px #e8c291 inset;
+    -webkit-box-shadow: 0 0 0 1px #E8C291 inset;
+    box-shadow: 0 0 0 1px #E8C291 inset;
+}
+	 
+
+  .textbox2 { 
+    background: white; 
+    border: 1px solid #ffa853; 
+    border-radius: 5px; 
+    box-shadow: 0 0 5px 3px #ffa853; 
+    color: #666; 
+    outline: none; 
+    height:23px; 
+    width: 215px; 
+  } 
+
+
+ #reg{
+      
+     position:fixed;
+     left: 430px;
+     top:80px;
+     
+  }
+ 
+  #about_pre{
+      color: black;
+      font-size: 16px;
+      font-family: sans-serif; 
+      display: block;
+      
+  }
+  
+  
+  #h3{
+      color:#cc0000;
+      font-family: sans-serif;
+          font-size: 18px;
+  }
+  
+  #h4{
+      color:#cc0000;
+      font-family: sans-serif;
+          font-size: 16px;
+  }
+  
+  #log{
+      position: absolute;
+      left: 1205px;;
+      top:86px;
+      width: 50px;
+      height: 50px;
+      background-image: url(images/photo.jpg);
+  }
+ 
+ 

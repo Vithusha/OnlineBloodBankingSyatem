@@ -1,0 +1,250 @@
+
+/*style for body part */
+
+
+body{
+    
+    font-family:fantasy;
+    
+    font-size: larger;
+    
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background: url("images/DesktopWallpaper-2.png")no-repeat center center fixed; 
+ 
+}
+
+/*style for the home button in register forms*/
+
+#home_button{
+    background-color: white;
+    background: url("images/homebutton.jpg");
+    width: 60px;
+    height: 59px;
+    position: relative;
+    left: 10px;
+    top: 20px;
+    
+    
+}
+h1{
+    color: white; 
+   // margin: 30px;
+    margin-top: 30px;
+    font-size: 100 px;
+    font-family: "Arial Black", Gadget, sans-serif;     /*font family*/
+    
+}
+#no_image{
+    background: white;
+    /*
+    background: url("extra1.jpg");
+    background-repeat: no-repeat;
+    position: relative;
+    left: 130px;
+    top: 60px;
+    
+    background: url("invite.jpg");
+    background-repeat: no-repeat;
+    position: relative;
+    left: 800px;
+    top: 600p;
+    */
+}
+/*style for buttons*/
+#button{
+    color: black;
+    border: black;
+    border-bottom-width: 3px;
+    padding: 5px;
+    background-color: white;
+    border-style: initial;
+    display: inline-block;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    width: 200px;
+    font-size: 16px;
+ 
+}
+/*style for login division*/
+.login_division{
+    background-image: url(images/bb.jpg);
+    border-radius: 25px;
+    border: 2px solid;
+    width: 400px;
+    height: 340px;
+    position: relative;
+    left: 700px;
+    top: 100px;
+    font-size: 18px;
+    font-family: Verdana, Geneva, sans-serif;
+    color: #990000;
+    
+    
+    
+}
+#white_p{
+   color: white; 
+}
+
+/*style for bank register division*/
+#bank_register{
+   
+   background-color: activeborder;
+   width: 450px;
+   height: 350px;
+   margin:auto;
+   position: relative;
+   float: next;
+   border: solid red;
+   font-size: 18px;
+   font-family: Verdana, Geneva, sans-serif;
+}
+
+/*style for register division*/
+#register{
+    
+   background: url("images/view_final.jpg");
+   background-repeat: no-repeat;
+   width: 650px;
+   height: 650px;
+   margin:auto;
+   position: relative;
+   float: next;
+   border: solid red;
+   font-size: 18px;
+   font-family: Verdana, Geneva, sans-serif;
+}
+/* Style The Dropdown Button */
+.dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    border-radius: 15px;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: #cc0000;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+    background-color: #cc0000;
+}
+
+
+
+
+
+home_btn{
+    
+    background-color: red;
+    background-size: 80px 80px;
+    background-repeat: no-repeat;
+    
+      background: url("images/homebutton.jpg");
+    width: 59px;
+    height: 60px;
+    position: relative;
+    right: 80px;
+    top: 200px;
+}
+
+#form_head{
+    color: #cc0000; 
+   
+    margin-top: 30px;
+    font-size: 100 px;
+    
+    font-family: "Arial Black", Gadget, sans-serif;     /*font family*/
+    border-top-style: solid;
+    
+    border-top-width: 30px;
+    position: relative;
+}
+
+#text1
+{
+border: 2px solid rgb(173, 204, 204);
+height: 31px;
+width: 223px;
+box-shadow: 0px 0px 27px rgb(204, 204, 204) inset;
+transition:500ms all ease;
+padding:3px 3px 3px 3px;
+}
+
+#text1:hover, #text1:focus
+{
+width:260px;
+transition:500ms all ease;
+background:url(msg.png) no-repeat right;
+background-size:25px 25px;
+background-position:96% 62%;
+padding:3px 32px 3px 3px;
+}
+
+
+ 
+ .inputs {
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    background-color: #EAEAEA;
+    background: -moz-linear-gradient(top, #FFF, #EAEAEA);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0.0, #FFF), color-stop(1.0, #EAEAEA));
+    border: 1px solid #CACACA;
+    color: #444;
+    font-size: 14px;
+    margin: 0 0 6px;
+    padding: 5px 9px;
+    width: 200px;
+}
+
+.inputs:focus {
+    background: #FFF;
+    -webkit-box-shadow: 0 0 25px #CCC;
+    -moz-box-shadow: 0 0 25px #ccc;
+    box-shadow: 0 0 25px #CCC;
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    transform: scale(1.05);
+}
+
+#login_btn{
+ width: 109px;
+ height: 56px;
+ background-image: url("images/button_red_login.png");
+ margin-top: 7px;
+ position: relative;
+ left: 145px;
+}
