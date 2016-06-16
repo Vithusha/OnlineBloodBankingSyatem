@@ -16,6 +16,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import connector.DBConnector;
 
 @WebServlet(name = "BB_servlet", urlPatterns = {"/BB_servlet"})
 public class BB_servlet extends HttpServlet {
@@ -31,10 +32,7 @@ public class BB_servlet extends HttpServlet {
      */
     
     
-    private static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";
-    private static final String DATABASE_URL = "jdbc:mysql://localhost:3306/obbs_data";
-    private static final String USERNAME = "root";
-    private static final String PASSWORD = "";
+
     int row;
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -57,11 +55,7 @@ public class BB_servlet extends HttpServlet {
             //connecting to driver
             
             
-            Class.forName(JDBC_DRIVER);
-            
-            System.out.println("driver found");
-            con = DriverManager.getConnection(DATABASE_URL, USERNAME, PASSWORD);
-            System.out.println("Connected successfully");
+           con=DBConnector.getConnection();
            
               String count_sql="SELECT COUNT(*) FROM bank";
          

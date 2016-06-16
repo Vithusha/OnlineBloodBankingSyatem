@@ -17,6 +17,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import connector.DBConnector;
 
 /**
  *
@@ -25,10 +26,7 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet(name = "Login_controller", urlPatterns = {"/Login_controller"})
 public class Login_controller extends HttpServlet {
 
-    private static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";
-    private static final String DATABASE_URL = "jdbc:mysql://localhost:3306/obbs_data";
-    private static final String USERNAME = "root";
-    private static final String PASSWORD = "";
+
     int row;
     private String password;
     public int d_id;
@@ -61,11 +59,7 @@ public class Login_controller extends HttpServlet {
             //connecting to driver
             
             
-            Class.forName(JDBC_DRIVER);
-            
-            System.out.println("driver found");
-            con = DriverManager.getConnection(DATABASE_URL, USERNAME, PASSWORD);
-            System.out.println("Connected successfully");
+            con=DBConnector.getConnection();
             
             
             String sql_user= "Select donor_id from donor where donor.username=?";

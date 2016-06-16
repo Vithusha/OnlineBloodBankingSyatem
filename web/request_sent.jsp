@@ -16,6 +16,6 @@
         <h1>Your request is successfully proceeded.</h1>
         <p>You will receive the notifications once a donor responds to your request.Keep in Touch.</p>
         
-        <a href="index.jsp"> <input type="submit" value="Home" name="req_sent" id="home_button" /> </a>
+        <a href="index.jsp"> <input type="submit" value="" name="req_sent" id="home_button" /> </a>
     </body>
 </html>

@@ -6,18 +6,16 @@
 package controller;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.PreparedStatement;
-import java.sql.ResultSet;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
+import connector.DBConnector;
+import java.sql.SQLException;
 /**
  *
  * @author CSE
@@ -27,10 +25,7 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet(name = "Check_Password", urlPatterns = {"/Check_Password"})
 public class Check_Password extends HttpServlet {
 
-    private static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";
-    private static final String DATABASE_URL = "jdbc:mysql://localhost:3306/obbs_data";
-    private static final String USERNAME = "root";
-    private static final String PASSWORD = "";
+
     
     
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
@@ -52,12 +47,7 @@ public class Check_Password extends HttpServlet {
             //connecting to driver
             
             
-            Class.forName(JDBC_DRIVER);
-            
-            System.out.println("driver found");
-            con = DriverManager.getConnection(DATABASE_URL, USERNAME, PASSWORD);
-            System.out.println("Connected successfully");
-           System.out.println("I am within the check password 2");
+            con=DBConnector.getConnection();
            
            
            View_Details donPass=new View_Details();
@@ -83,7 +73,7 @@ public class Check_Password extends HttpServlet {
           dis.forward(request, response);
         }
     }
-        catch(Exception e){
+        catch(SQLException | ServletException | IOException e){
             System.out.println(e);
         }
     }

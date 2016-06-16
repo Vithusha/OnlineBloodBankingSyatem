@@ -3,8 +3,14 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/CSE/Documents/NetBeansProjects/OBBS/web/donor_home.jsp</file>
-            <file>file:/C:/Users/CSE/Documents/NetBeansProjects/OBBS/src/java/controller/View_Details.java</file>
+            <file>file:/C:/Users/CSE/Documents/NetBeansProjects/OBBS/src/java/controller/BB_servlet.java</file>
+            <file>file:/C:/Users/CSE/Documents/NetBeansProjects/OBBS/src/java/controller/Check_Password.java</file>
+            <file>file:/C:/Users/CSE/Documents/NetBeansProjects/OBBS/web/BB_edit.jsp</file>
+            <file>file:/C:/Users/CSE/Documents/NetBeansProjects/OBBS/web/getPDF.jsp</file>
+            <file>file:/C:/Users/CSE/Documents/NetBeansProjects/OBBS/src/java/controller/BB_loginController.java</file>
+            <file>file:/C:/Users/CSE/Documents/NetBeansProjects/OBBS/web/not_sent.jsp</file>
+            <file>file:/C:/Users/CSE/Documents/NetBeansProjects/OBBS/src/java/controller/Login_controller.java</file>
+            <file>file:/C:/Users/CSE/Documents/NetBeansProjects/OBBS/web/request_sent.jsp</file>
         </group>
     </open-files>
 </project-private>

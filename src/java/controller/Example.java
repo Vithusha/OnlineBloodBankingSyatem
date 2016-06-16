@@ -8,8 +8,8 @@ import com.twilio.sdk.creator.api.v2010.account.MessageCreator;
 public class Example {
     
   // Find your Account Sid and Token at twilio.com/console
-  public static final String ACCOUNT_SID = "AC0af83f9b3e4e13bcd3a2b789a715b026";
-  public static final String AUTH_TOKEN = "445420ad6fa48bf864f3b03635d3d099";
+  public static final String ACCOUNT_SID = "ACc525fe5b3a985a35f1e5bdee8956157f";
+  public static final String AUTH_TOKEN = "a44674be61387e56ec807245948705b7";
   
   public void sendSMS(String phone_num,String accept_num,String bank,String name ) {
    Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
@@ -17,7 +17,7 @@ public class Example {
     Message message = new MessageCreator(
       ACCOUNT_SID,
       new PhoneNumber(phone_num), // TO number
-      new PhoneNumber("+15073966757"), // From Twilio number
+      new PhoneNumber("+12014706012"), // From Twilio number
       "Person named "+name+" is in urgent of your blood group at "+ bank+". Their contact number is "+accept_num+"."
               + "Contact them if you wish to donate blood.Thank you.").execute();
 

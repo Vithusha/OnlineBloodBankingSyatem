@@ -54,7 +54,7 @@ try
           // fetch & writing records in pdf files
         document.add(new Paragraph("NAME ::"+rs.getString(2)+"\nCONTACT NO. ::"+rs.getString(3)+"\nBLOOD GROUP ::"+rs.getString(4)+"\nBLOOD BANK ::"+rs.getString(5)+"\n\n"));
     }
-    document.add(new Paragraph("---------------------------------------------------------PAGE NO::"+document.getPageNumber()+"------------------------------------------------------"));
+    
     
     document.close(); //document instance closed
     conn.close();  //db connection close
